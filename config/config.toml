@@ -1,0 +1,24 @@
+# Jarvis-AI – persönliche OpenJarvis-Konfiguration
+# Wird von install.sh / install.ps1 nach ~/.openjarvis/config.toml kopiert.
+# Basis: Preset "chat-simple" (Ollama + kleines lokales Modell, keine Tools).
+
+[engine]
+default = "ollama"
+
+[engine.ollama]
+host = "http://localhost:11434"
+
+[intelligence]
+default_model = "qwen3.5:4b"        # schnell und leicht (~3 GB)
+# default_model = "qwen3.5:9b"      # bessere Qualität, braucht mehr RAM
+# default_model = "llama3.1:8b"     # Alternative
+
+[agent]
+default_agent = "simple"            # einfache Unterhaltung, keine Tools
+
+[server]
+host = "127.0.0.1"                  # nur lokal erreichbar
+port = 8000
+
+[security]
+profile = "personal"                # von `jarvis doctor` empfohlen
